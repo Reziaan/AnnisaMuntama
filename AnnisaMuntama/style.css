@@ -1,0 +1,311 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 60px;
+  background: linear-gradient(to bottom, #ffe6e6, #ffffff);
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid #c0392b;
+  background: white;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c0392b;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  border: 2px solid #c0392b;
+  border-radius: 15px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* biar klik tetap bisa */
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 0, 0, 0.6);
+  font-size: 14px;
+  animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.gift-img {
+  display: block;
+  width: 250px;        /* UBAH ukuran di sini */
+  max-width: 80%;
+  margin: 0 auto;      /* bikin ke tengah */
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 span {
+  color: #e84393;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  color: #d63384;
+}
+
+
+.nama-user {
+  font-size: 1.6rem; /* Sedikit dikecilkan agar muat satu baris */
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  
+  /* Kunci agar tetap ke samping: */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; /* Menambahkan titik-titik jika layar benar-benar terlalu kecil */
+}
+
+/* Tambahan agar di HP tulisannya tidak terlalu besar dan tetap muat */
+@media (max-width: 600px) {
+  .nama-user {
+    font-size: 1.2rem; 
+  }
+}
+
+/* Mengatur Grid 2 Kolom */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom sejajar */
+  gap: 15px; /* Jarak antar kartu */
+  justify-items: center; /* Kartu berada di tengah kolom */
+  width: 100%;
+  max-width: 400px; /* Batasi lebar maksimal agar tidak terlalu lebar di layar PC */
+  margin: 20px auto;
+}
+
+/* Mengatur ukuran Kartu agar seragam */
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  background: white;
+  border: 2px solid #b33939; 
+  border-radius: 25px; /* Sedikit lebih bulat agar lebih estetik */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 15px; /* Jarak antara isi kartu (gambar) dengan border merah */
+  box-sizing: border-box; /* Sangat penting agar padding tidak merusak ukuran kotak */
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain; /* Agar gambar kartun tidak terpotong */
+  margin-bottom: 5px;
+}
+
+.card span {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Tombol Back di bawah */
+.btn-back-main {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 2px solid #b33939;
+  background: white;
+  color: #b33939;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Container Utama */
+.photo-section-custom {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #fdf2f4; /* Sesuaikan warna latar */
+}
+
+/* Pembungkus Konten agar Center */
+.photo-section-custom .content-wrapper {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Styling Teks */
+.photo-section-custom .text-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #444;
+}
+
+.photo-section-custom .text-header p {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.photogrid {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.dairy {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.flower {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+
+.love-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  color: #ff6fae;
+}
+
+.love-video {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px pink;
+}
+
+.love-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 6s infinite alternate;
+}
+
+#loveText {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 0 5px black;
+}
+
+.love-control button {
+  margin: 5px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.logi {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
